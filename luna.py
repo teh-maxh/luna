@@ -3,7 +3,7 @@
 import datetime
 try:  # a non-standard package is used
 	import astral
-except ImportException:
+except ImportError:
 	exit("\033[1;91mPackage astral required.\n\033[0;91mInstall it with 'pip install astral' and try again.\033[0m")  # ANSI escape sequences fuck yeah!
 
 phase = astral.Location(("","",0,0,"UTC",0)).moon_phase()
